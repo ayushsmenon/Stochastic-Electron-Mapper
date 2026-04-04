@@ -1,4 +1,5 @@
  This project simulates the electron probability density of a Hydrogen atom by numerically solving the time-independent Schrödinger equation and rendering the results as a real-time 3D point cloud.Coordinate points are computed  to visualize $s, p, d,$ and $f$ orbitals.
+
 Mathematical Concept
  Uses radial wavefunctions based on Laguerre polynomials  
  Angular distribution computed using spherical harmonics  
