@@ -37,9 +37,38 @@ Coordinate points are computed to visualize s, p, d, and f orbitals.
 - Lighthouse3D – GLSL and spherical coordinates tutorials  
 
 ---
+---
+
+## Acknowledgments
+* **[Dear ImGui](https://github.com/ocornut/imgui)**: Created by Omar Cornut and contributors. It provided the lightweight and intuitive graphical user interface necessary for real-time parameter tuning.
+* **[GLFW](https://www.glfw.org/)**: A multi-platform library for OpenGL, OpenGL ES, Vulkan, window management, and input, which served as the backbone for our windowing and user interaction layer.
+
+---
 
 ## Notes
 - Performance depends on system capability due to high particle count  
 - Lower particle counts can be used for smoother performance  
 
 ---
+
+# Setup & Compilation (C++)
+
+## Build Command (Windows / MinGW)
+
+Run the following command in the project root directory to compile the optimized simulation:
+
+```bash
+g++ -std=c++17 -O3 main.cpp \imgui/imgui.cpp \imgui/imgui_draw.cpp \imgui/imgui_tables.cpp \imgui/imgui_widgets.cpp \imgui/backends/imgui_impl_glfw.cpp \imgui/backends/imgui_impl_opengl2.cpp \-I./imgui \-I./imgui/backends \-I./glfw/include \-L./glfw/lib-mingw-w64 \-lglfw3 -lopengl32 -lgdi32 \-o atomic_sim.exe
+```
+
+---
+
+# Running the Simulation
+
+Once the project is successfully compiled, run the executable from the project root directory.
+
+## Windows (PowerShell / Command Prompt)
+
+```bash
+.\atomic_sim.exe
+```
